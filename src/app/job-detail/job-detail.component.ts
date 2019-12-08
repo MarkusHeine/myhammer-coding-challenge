@@ -8,17 +8,13 @@ import { JobsService } from "../services/jobs.service";
   styleUrls: ["./job-detail.component.css"]
 })
 export class JobDetailComponent implements OnInit {
-  @Input() specificJob: Jobs;
+  selectedJob: Jobs;
 
   constructor(private jobsService: JobsService) {}
 
   ngOnInit() {
     this.jobsService.jobSelected.subscribe(data => {
-      console.log(data);
+      this.selectedJob = data;
     });
-  }
-
-  logSpecificJob() {
-    console.log(this.specificJob);
   }
 }

@@ -1,21 +1,36 @@
-<div class="row m-1">
-  <div class="col">
-    show jobs here
-    <button (click)="logSpecificJob()">click</button>
+<div
+  id="active-job-detail"
+  class="row m-1 d-flex justify-content-center align-items-center"
+>
+  <div class="col-xs ">
+    <div
+      class="card text-center shadow bg-white rounded"
+      *ngIf="selectedJob !== undefinded"
+    >
+      <div class="card-header d-flex justify-content-start align-items-center">
+        <img
+          src="{{ selectedJob.thumbnail }}"
+          class="img-responsive rounded-circle mr-2"
+          alt="image for {{ selectedJob.title }}"
+          style="max-height: 80px;"
+        />
+        <h6>{{ selectedJob.title }}</h6>
+      </div>
+      <div class="card-body">
+        <p class="card-text">
+          <small>{{ selectedJob.description }}</small>
+        </p>
+      </div>
+      <div class="card-footer text-muted">
+        <button type="button" class="btn">
+          messages
+          <span class="badge">{{ selectedJob.counter.messages_total }}</span>
+        </button>
+        <button type="button" class="btn">
+          unread
+          <span class="badge">{{ selectedJob.counter.messages_unread }}</span>
+        </button>
+      </div>
+    </div>
   </div>
 </div>
-
-<!-- <div class="card">
-        <div *ngIf="!actualId; else showJobBlock"></div>
-        <ng-template #showJobBlock>here is the job</ng-template>
-      </div>
-  
-  <p *ngIf="!actualId; else showJobBlock">
-          <div class="card">
-              <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p>no job to show</pyarn>
-              </div>
-          </div>
-      </p> 
-    <ng-template #showJobBlock>here is the job</ng-template>  -->

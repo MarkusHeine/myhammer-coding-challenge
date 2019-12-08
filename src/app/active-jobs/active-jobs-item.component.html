@@ -1,16 +1,29 @@
-<div class="list-group-item clearfix m-1" (click)="showJob(activeJob.id)">
-  <div class="float-left">
+<div
+  class="list-group-item 
+         clearfix 
+         m-1 
+         border-top-0 
+         border-right-0 
+         border-left-0 
+         rounded-0 d-flex 
+         flex-row 
+         shadow-sm 
+         bg-white 
+         rounded"
+  (click)="showJob(activeJob.id)"
+>
+  <div class="">
+    <img
+      [src]="activeJob.thumbnail"
+      alt="image for {{ activeJob.title }}"
+      class="img-responsive mr-2 rounded-circle"
+      style="max-height: 50px;"
+    />
+  </div>
+  <div class="">
     <h6 class="list-group-item-heading">{{ activeJob.title }}</h6>
     <p class="list-group-item-text">
       <small>{{ activeJob.zip_code }}, {{ activeJob.city }}</small>
     </p>
-  </div>
-  <div class="float-right">
-    <img
-      [src]="activeJob.thumbnail"
-      alt="image for {{ activeJob.title }}"
-      class="img-responsive ml-2"
-      style="max-height: 50px;"
-    />
   </div>
 </div>
