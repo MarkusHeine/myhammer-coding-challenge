@@ -1,4 +1,8 @@
-<a href="#" class="list-group-item clearfix m-1">
+<a
+  [routerLink]="['/']"
+  [queryParams]="{ detail: activeJob.id }"
+  class="list-group-item clearfix m-1"
+>
   <div class="float-left">
     <h6 class="list-group-item-heading">{{ activeJob.title }}</h6>
     <p class="list-group-item-text">

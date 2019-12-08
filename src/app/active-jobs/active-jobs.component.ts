@@ -14,7 +14,6 @@ export class ActiveJobsComponent implements OnInit {
 
   ngOnInit() {
     this.httpService.getData().subscribe(resp => {
-      console.log(resp.body);
       this.activeJobs = resp.body;
     });
   }
