@@ -1,6 +1,7 @@
+import { JobsService } from "./../services/jobs.service";
+import { HttpService } from "./../services/http.service";
 import { Component, OnInit } from "@angular/core";
 import { Jobs } from "../models/jobs.model";
-import { HttpService } from "../http.service";
 
 @Component({
   selector: "app-active-jobs",
@@ -10,11 +11,9 @@ import { HttpService } from "../http.service";
 export class ActiveJobsComponent implements OnInit {
   activeJobs: Jobs[] = [];
 
-  constructor(private httpService: HttpService) {}
+  constructor(private jobsService: JobsService) {}
 
   ngOnInit() {
-    this.httpService.getData().subscribe(resp => {
-      this.activeJobs = resp.body;
-    });
+    this.activeJobs = this.jobsService.getData();
   }
 }

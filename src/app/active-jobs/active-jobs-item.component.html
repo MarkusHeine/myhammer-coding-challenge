@@ -1,8 +1,4 @@
-<a
-  [routerLink]="['/']"
-  [queryParams]="{ detail: activeJob.id }"
-  class="list-group-item clearfix m-1"
->
+<div class="list-group-item clearfix m-1" (click)="showJob(activeJob.id)">
   <div class="float-left">
     <h6 class="list-group-item-heading">{{ activeJob.title }}</h6>
     <p class="list-group-item-text">
@@ -17,4 +13,4 @@
       style="max-height: 50px;"
     />
   </div>
-</a>
+</div>

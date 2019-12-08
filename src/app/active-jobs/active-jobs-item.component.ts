@@ -1,3 +1,4 @@
+import { JobsService } from "./../services/jobs.service";
 import { Jobs } from "./../models/jobs.model";
 import { Component, Input } from "@angular/core";
 
@@ -8,4 +9,10 @@ import { Component, Input } from "@angular/core";
 })
 export class ActiveJobsItemComponent {
   @Input() activeJob: Jobs;
+
+  constructor(private jobsService: JobsService) {}
+
+  showJob(id) {
+    this.jobsService.getSpecificJob(id);
+  }
 }
