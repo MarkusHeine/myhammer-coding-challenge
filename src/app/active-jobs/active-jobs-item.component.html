@@ -1,14 +1,16 @@
-<div class="list-group-item clearfix">
+<a href="#" class="list-group-item clearfix m-1">
   <div class="float-left">
     <h6 class="list-group-item-heading">{{ activeJob.title }}</h6>
-    <p class="list-group-item-text">City: {{ activeJob.city }}</p>
+    <p class="list-group-item-text">
+      <small>{{ activeJob.zip_code }}, {{ activeJob.city }}</small>
+    </p>
   </div>
   <div class="float-right">
     <img
       [src]="activeJob.thumbnail"
       alt="image for {{ activeJob.title }}"
-      class="img-responsive"
+      class="img-responsive ml-2"
       style="max-height: 50px;"
     />
   </div>
-</div>
+</a>

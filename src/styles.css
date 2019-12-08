@@ -2,3 +2,15 @@
 body {
   margin: 10px;
 }
+
+p {
+  margin: 0;
+}
+
+a {
+  color: black;
+}
+
+a:hover {
+  color: grey;
+}
