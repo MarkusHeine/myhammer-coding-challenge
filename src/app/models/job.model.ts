@@ -1,4 +1,4 @@
-export interface Jobs {
+export interface Job {
   id: string;
   title: string;
   zip_code: string;

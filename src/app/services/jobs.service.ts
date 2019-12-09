@@ -1,25 +1,25 @@
 import { HttpService } from "./http.service";
 import { Injectable, EventEmitter } from "@angular/core";
-import { Jobs } from "../models/jobs.model";
+import { Job } from "../models/job.model";
 
 type GetData = {
   errno: number;
   error: string;
-  body: Jobs[];
+  body: Job[];
 };
 
 @Injectable({
   providedIn: "root"
 })
 export class JobsService {
-  activeJobs: Jobs[] = [];
+  activeJobs: Job[] = [];
 
   constructor(private getJobs: HttpService) {}
 
   getData() {
     this.getJobs.getData().subscribe((data: GetData) => {
       console.log(data);
-      data.body.forEach((job: Jobs) => {
+      data.body.forEach((job: Job) => {
         if (job.state === "active") {
           this.activeJobs.push(job);
         }
@@ -29,12 +29,12 @@ export class JobsService {
   }
 
   getSpecificJob(id: string) {
-    this.activeJobs.forEach((job: Jobs) => {
+    this.activeJobs.forEach((job: Job) => {
       if (job.id === id) {
         this.jobSelected.emit(job);
       }
     });
   }
 
-  jobSelected = new EventEmitter<Jobs>();
+  jobSelected = new EventEmitter<Job>();
 }

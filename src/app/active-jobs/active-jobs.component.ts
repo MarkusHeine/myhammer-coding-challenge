@@ -1,7 +1,7 @@
 import { JobsService } from "./../services/jobs.service";
 import { HttpService } from "./../services/http.service";
 import { Component, OnInit } from "@angular/core";
-import { Jobs } from "../models/jobs.model";
+import { Job } from "../models/job.model";
 
 @Component({
   selector: "app-active-jobs",
@@ -9,7 +9,7 @@ import { Jobs } from "../models/jobs.model";
   styleUrls: ["./active-jobs.component.css"]
 })
 export class ActiveJobsComponent implements OnInit {
-  activeJobs: Jobs[] = [];
+  activeJobs: Job[] = [];
 
   constructor(private jobsService: JobsService) {}
 

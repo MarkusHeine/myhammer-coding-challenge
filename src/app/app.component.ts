@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { HttpService } from "./services/http.service";
-import { Jobs } from "./models/jobs.model";
+import { Job } from "./models/job.model";
 
 @Component({
   selector: "app-root",

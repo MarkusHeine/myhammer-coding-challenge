@@ -1,5 +1,5 @@
 import { JobsService } from "./../services/jobs.service";
-import { Jobs } from "./../models/jobs.model";
+import { Job } from "../models/job.model";
 import { Component, Input } from "@angular/core";
 
 @Component({
@@ -8,7 +8,7 @@ import { Component, Input } from "@angular/core";
   styleUrls: ["./active-jobs-item.component.css"]
 })
 export class ActiveJobsItemComponent {
-  @Input() activeJob: Jobs;
+  @Input() activeJob: Job;
 
   constructor(private jobsService: JobsService) {}
 

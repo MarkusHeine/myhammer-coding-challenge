@@ -1,4 +1,4 @@
-import { Jobs } from "./../models/jobs.model";
+import { Job } from "../models/job.model";
 import { Component, OnInit, Input } from "@angular/core";
 import { JobsService } from "../services/jobs.service";
 
@@ -8,7 +8,7 @@ import { JobsService } from "../services/jobs.service";
   styleUrls: ["./job-detail.component.css"]
 })
 export class JobDetailComponent implements OnInit {
-  selectedJob: Jobs;
+  selectedJob: Job;
 
   constructor(private jobsService: JobsService) {}
 
