@@ -10,8 +10,8 @@ export interface Job {
   categories: Category[];
   state: string;
   description: string;
-  end_date: Date;
-  created_at: Date;
+  end_date: string;
+  created_at: string;
 }
 
 interface Category {

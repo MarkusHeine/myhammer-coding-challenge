@@ -12,7 +12,7 @@ export class ActiveJobsItemComponent {
 
   constructor(private jobsService: JobsService) {}
 
-  showJob(id) {
+  showJob = (id: string) => {
     this.jobsService.getSpecificJob(id);
-  }
+  };
 }

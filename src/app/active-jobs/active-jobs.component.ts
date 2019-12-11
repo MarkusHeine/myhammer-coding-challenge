@@ -1,5 +1,4 @@
 import { JobsService } from "./../services/jobs.service";
-import { HttpService } from "./../services/http.service";
 import { Component, OnInit } from "@angular/core";
 import { Job } from "../models/job.model";
 

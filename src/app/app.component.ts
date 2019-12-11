@@ -1,6 +1,4 @@
-import { Component, OnInit } from "@angular/core";
-import { HttpService } from "./services/http.service";
-import { Job } from "./models/job.model";
+import { Component } from "@angular/core";
 
 @Component({
   selector: "app-root",
