@@ -11,7 +11,6 @@ import { HttpService } from "../services/http.service";
 import { JobsService } from "../services/jobs.service";
 
 describe("ActiveJobsComponent", () => {
-  let component: ActiveJobsComponent;
   let fixture: ComponentFixture<ActiveJobsComponent>;
   let compiled: any;
 
@@ -24,7 +23,6 @@ describe("ActiveJobsComponent", () => {
 
   beforeEach(() => {
     fixture = TestBed.createComponent(ActiveJobsComponent);
-    component = fixture.componentInstance;
     compiled = fixture.debugElement.nativeElement;
     fixture.detectChanges();
   });

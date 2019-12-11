@@ -10,7 +10,6 @@ import { HttpClientModule } from "@angular/common/http";
 import { routing } from "../app.routing";
 import { HttpService } from "../services/http.service";
 import { JobsService } from "../services/jobs.service";
-import { of } from "rxjs";
 
 const job: Job = {
   id: "1",
@@ -42,20 +41,15 @@ const job: Job = {
   created_at: "2018-10-01T14:14:32+02:00"
 };
 
-xdescribe("ActiveJobsItemComponent", () => {
+describe("ActiveJobsItemComponent", () => {
   let component: ActiveJobsItemComponent;
   let fixture: ComponentFixture<ActiveJobsItemComponent>;
   let compiled: any;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [
-        AppComponent,
-        ActiveJobsComponent,
-        JobDetailComponent,
-        ActiveJobsItemComponent
-      ],
-      imports: [BrowserModule, HttpClientModule, routing],
+      declarations: [ActiveJobsItemComponent],
+      imports: [BrowserModule, HttpClientModule],
       providers: [HttpService, JobsService]
     }).compileComponents();
   }));
@@ -63,7 +57,17 @@ xdescribe("ActiveJobsItemComponent", () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(ActiveJobsItemComponent);
     component = fixture.componentInstance;
-    compiled = fixture.debugElement.nativeElement;
-    fixture.detectChanges();
+    // compiled = fixture.debugElement.nativeElement;
+    // fixture.detectChanges();
+  });
+
+  xdescribe("showJob", () => {
+    it("should return the active Job when clicked", () => {
+      let response: Job;
+
+      spyOn(component, "showJob").and.callFake(function(id) {});
+
+      expect(component.activeJob).toBe(job);
+    });
   });
 });
