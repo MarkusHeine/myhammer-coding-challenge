@@ -1,3 +1,4 @@
+import { logging } from "protractor";
 import { Job } from "../models/job.model";
 import { Component, OnInit, Input } from "@angular/core";
 import { JobsService } from "../services/jobs.service";
@@ -9,12 +10,16 @@ import { JobsService } from "../services/jobs.service";
 })
 export class JobDetailComponent implements OnInit {
   selectedJob: Job;
+  attachments: number;
+  isAwarded: boolean;
 
   constructor(private jobsService: JobsService) {}
 
   ngOnInit() {
-    this.jobsService.jobSelected.subscribe(data => {
+    this.jobsService.jobSelected.subscribe((data: Job) => {
       this.selectedJob = data;
+      this.attachments = data.attachments.length;
+      this.isAwarded = data.is_awarded;
     });
   }
 }

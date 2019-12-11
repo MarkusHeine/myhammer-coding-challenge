@@ -1,3 +1,27 @@
 #active-job-detail {
   min-height: 100vh;
 }
+
+.button-badge {
+  text-decoration: none;
+  padding: 1rem 1.5rem;
+  position: relative;
+  display: inline-block;
+  border-radius: 0.2rem;
+  transition: all ease 0.4s;
+}
+
+.button-badge:hover {
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.badge {
+  position: absolute;
+  top: 0px;
+  right: -4px;
+  font-size: 0.7em;
+}
+
+.award {
+  padding: 1rem 1.5rem;
+}
