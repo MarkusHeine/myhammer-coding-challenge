@@ -18,7 +18,6 @@ export class JobsService {
 
   getData() {
     this.getJobs.getData().subscribe((data: GetData) => {
-      console.log(data);
       data.body.forEach((job: Job) => {
         if (job.state === "active") {
           this.activeJobs.push(job);

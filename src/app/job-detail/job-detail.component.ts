@@ -1,4 +1,3 @@
-import { logging } from "protractor";
 import { Job } from "../models/job.model";
 import { Component, OnInit, Input } from "@angular/core";
 import { JobsService } from "../services/jobs.service";
