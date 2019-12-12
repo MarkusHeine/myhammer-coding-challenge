@@ -10,13 +10,12 @@ import { HttpClientModule } from "@angular/common/http";
 import { routing } from "../app.routing";
 import { HttpService } from "../services/http.service";
 import { JobsService } from "../services/jobs.service";
+import { EventEmitter } from "@angular/core";
 
 describe("JobDetailComponent", () => {
   let component: JobDetailComponent;
   let fixture: ComponentFixture<JobDetailComponent>;
   let compiled: any;
-  let jobService: JobsService;
-  let selectedJob: Job;
 
   class MockJobsService extends JobsService {
     private job: Job = {
@@ -53,6 +52,8 @@ describe("JobDetailComponent", () => {
       console.log(id);
       this.jobSelected.emit(this.job);
     }
+
+    jobSelected = new EventEmitter<Job>();
   }
 
   beforeEach(async(() => {
@@ -82,7 +83,7 @@ describe("JobDetailComponent", () => {
     expect(component).toBeTruthy();
   });
 
-  xdescribe("renders the selected Job", () => {
+  describe("renders the selected Job", () => {
     it("should render the title correctly", () => {
       console.log("compiled", compiled);
       console.log(component.selectedJob);
