@@ -32,15 +32,14 @@
         </button>
         <div class="hr"></div>
 
-        <div class="" *ngIf="selectedJob.is_awarded; else isNotAwarded">
-          <button type="button" class="btn button-badge btn-block">
+        <button type="button" class="btn btn-block">
+          <div class="" *ngIf="selectedJob.is_awarded; else isNotAwarded">
             <i class="d-block award fa fa-star"></i>
-          </button>
-        </div>
-        <ng-template #isNotAwarded>
-          <button type="button" class="btn button-badge btn-block">
-            <i class="d-block award fa fa-star-o"></i></button
-        ></ng-template>
+          </div>
+          <ng-template #isNotAwarded>
+            <i class="d-block award fa fa-star-o"></i
+          ></ng-template>
+        </button>
       </div>
     </div>
   </div>
