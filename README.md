@@ -2,7 +2,7 @@
 
 Built with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.20 
           and [Bootstrap](https://getbootstrap.com/) version 4.4.1
-          and  🖤, 🤩 and 🤯 by Markus Heine
+          and  🖤 and 🤩 and 🤯 by Markus Heine
 
 ## Task
 
