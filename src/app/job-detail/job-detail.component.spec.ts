@@ -92,7 +92,7 @@ describe("JobDetailComponent", () => {
       );
     });
 
-    xit("should render the description correctly", () => {
+    it("should render the description correctly", () => {
       expect(compiled.querySelector(".card-text small").textContent).toContain(
         "test desc"
       );
