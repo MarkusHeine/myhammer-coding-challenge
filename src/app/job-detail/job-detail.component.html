@@ -19,23 +19,27 @@
         </p>
       </div>
       <div class="card-footer text-muted d-flex justify-content-between">
-        <button type="button" class="btn button-badge">
+        <button type="button" class="btn button-badge btn-block">
           <i class="fa fa-envelope-o"></i>
           <span class="badge badge alert">{{
             selectedJob.counter.messages_unread
           }}</span>
         </button>
         <div class="hr"></div>
-        <button type="button" class="btn button-badge">
+        <button type="button" class="btn button-badge btn-block">
           <i class="fa fa-paperclip"></i>
           <span class="badge alert">{{ attachments }}</span>
         </button>
         <div class="hr"></div>
-        <div *ngIf="selectedJob.is_awarded; else isNotAwarded">
-          <i class="award fa fa-star"></i>
+
+        <div class="" *ngIf="selectedJob.is_awarded; else isNotAwarded">
+          <button type="button" class="btn button-badge btn-block">
+            <i class="d-block award fa fa-star"></i>
+          </button>
         </div>
-        <ng-template #isNotAwarded
-          ><i class="award fa fa-star-o"></i
+        <ng-template #isNotAwarded>
+          <button type="button" class="btn button-badge btn-block">
+            <i class="d-block award fa fa-star-o"></i></button
         ></ng-template>
       </div>
     </div>

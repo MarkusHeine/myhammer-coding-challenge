@@ -12,3 +12,12 @@ p {
   width: 1px;
   border: 1px solid lightgray;
 }
+
+.link {
+  color: black;
+}
+
+.link:hover {
+  color: lightgrey;
+  cursor: pointer;
+}
