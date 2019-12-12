@@ -31,7 +31,7 @@
           <span class="badge alert">{{ attachments }}</span>
         </button>
         <div class="hr"></div>
-        <div *ngIf="isAwarded; else isNotAwarded">
+        <div *ngIf="selectedJob.is_awarded; else isNotAwarded">
           <i class="award fa fa-star"></i>
         </div>
         <ng-template #isNotAwarded

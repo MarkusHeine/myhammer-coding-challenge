@@ -14,10 +14,10 @@ type GetData = {
 export class JobsService {
   activeJobs: Job[] = [];
 
-  constructor(private getJobs: HttpService) {}
+  constructor(private httpService: HttpService) {}
 
-  getData() {
-    this.getJobs.getData().subscribe((data: GetData) => {
+  getJobData() {
+    this.httpService.getJobData().subscribe((data: GetData) => {
       data.body.forEach((job: Job) => {
         if (job.state === "active") {
           this.activeJobs.push(job);

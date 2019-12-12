@@ -4,8 +4,7 @@ import { Job } from "../models/job.model";
 
 @Component({
   selector: "app-active-jobs",
-  templateUrl: "./active-jobs.component.html",
-  styleUrls: ["./active-jobs.component.css"]
+  templateUrl: "./active-jobs.component.html"
 })
 export class ActiveJobsComponent implements OnInit {
   activeJobs: Job[] = [];
@@ -13,6 +12,6 @@ export class ActiveJobsComponent implements OnInit {
   constructor(private jobsService: JobsService) {}
 
   ngOnInit() {
-    this.activeJobs = this.jobsService.getData();
+    this.activeJobs = this.jobsService.getJobData();
   }
 }

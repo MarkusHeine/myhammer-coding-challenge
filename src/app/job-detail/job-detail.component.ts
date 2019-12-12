@@ -1,5 +1,5 @@
 import { Job } from "../models/job.model";
-import { Component, OnInit, Input } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 import { JobsService } from "../services/jobs.service";
 
 @Component({
@@ -18,7 +18,6 @@ export class JobDetailComponent implements OnInit {
     this.jobsService.jobSelected.subscribe((data: Job) => {
       this.selectedJob = data;
       this.attachments = data.attachments.length;
-      this.isAwarded = data.is_awarded;
     });
   }
 }
