@@ -30,9 +30,7 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 ## Open tasks
 
-- [ ] some minor responsivenes issues - about 1 hour of work
-- [ ] get deeper into testing and get all the tests done 
-  - [ ] this is more work because I have to read a lot, or I have to ask a senior/ mentor for help - 1 to 2 working days
+- [ ] get deeper into testing and get all the tests done and working
 
 ## Further help
 
